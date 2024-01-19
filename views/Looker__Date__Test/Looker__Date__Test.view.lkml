@@ -16,12 +16,20 @@ view: Looker_Date_Test {
         drill_fields: [Date_Dim_1_Hierarchy_Date_Dim_1_Level]
     }
 
+    dimension: Date_Dim_1_Hierarchy_Quarter_Date {
+        label: "   Quarter"
+        group_label: "Date Dim 1 Hierarchy"
+        type: date_quarter
+        sql: ${TABLE}.`Quarter Date`;;
+        drill_fields: [Date_Dim_1_Hierarchy_Month1]
+    }
+
     dimension: Date_Dim_1_Hierarchy_Year2 {
-        label: "   Year"
+        label: "    Year"
         group_label: "Date Dim 1 Hierarchy"
         type: date_year
         sql: ${TABLE}.`Year2`;;
-        drill_fields: [Date_Dim_1_Hierarchy_Month1]
+        drill_fields: [Date_Dim_1_Hierarchy_Quarter_Date]
     }
 
     dimension: Date_Dim2_Hierarchy_Date2 {
