@@ -32,37 +32,6 @@ view: Looker_Date_Test {
         drill_fields: [Date_Dim_1_Hierarchy_Quarter_Date]
     }
 
-    dimension: Date_Dim2_Hierarchy_Date2 {
-        label: " Date"
-        group_label: "Date Dim2 Hierarchy"
-        type: date
-        sql: ${TABLE}."Date2";;
-    }
-
-    dimension: Date_Dim2_Hierarchy_Month_Date {
-        label: "  Month"
-        group_label: "Date Dim2 Hierarchy"
-        type: date_month
-        sql: ${TABLE}."Month Date";;
-        drill_fields: [Date_Dim2_Hierarchy_Date2]
-    }
-
-    dimension: Date_Dim2_Hierarchy_Quarter {
-        label: "   Quarter"
-        group_label: "Date Dim2 Hierarchy"
-        type: date_quarter
-        sql: ${TABLE}."Quarter";;
-        drill_fields: [Date_Dim2_Hierarchy_Month_Date]
-    }
-
-    dimension: Date_Dim2_Hierarchy_Year3 {
-        label: "    Year"
-        group_label: "Date Dim2 Hierarchy"
-        type: date_year
-        sql: ${TABLE}."Year3";;
-        drill_fields: [Date_Dim2_Hierarchy_Quarter]
-    }
-
     dimension: Date_Dimension_Hierarchy_Date_Dimension_Level {
         label: " Date"
         group_label: "Date Dimension Hierarchy"
@@ -84,6 +53,37 @@ view: Looker_Date_Test {
         type: date_year
         sql: ${TABLE}."Year1";;
         drill_fields: [Date_Dimension_Hierarchy_Month]
+    }
+
+    dimension: Date_QDS_Date2 {
+        label: " Date"
+        group_label: "Date QDS"
+        type: date
+        sql: ${TABLE}."Date2";;
+    }
+
+    dimension: Date_QDS_Month_Date {
+        label: "  Month"
+        group_label: "Date QDS"
+        type: date_month
+        sql: ${TABLE}."Month Date";;
+        drill_fields: [Date_QDS_Date2]
+    }
+
+    dimension: Date_QDS_Quarter {
+        label: "   Quarter"
+        group_label: "Date QDS"
+        type: date_quarter
+        sql: ${TABLE}."Quarter";;
+        drill_fields: [Date_QDS_Month_Date]
+    }
+
+    dimension: Date_QDS_Year3 {
+        label: "    Year"
+        group_label: "Date QDS"
+        type: date_year
+        sql: ${TABLE}."Year3";;
+        drill_fields: [Date_QDS_Quarter]
     }
 
 
