@@ -93,4 +93,10 @@ view: Looker_Date_Test {
         sql: ${TABLE}."m_salesamount_sum";;
     }
 
+    measure: m_salesordernumber_distinct {
+        label: "Sales Order Number -DC"
+        type: count_distinct
+        sql: ${TABLE}."m_salesordernumber_distinct";;
+    }
+
 }
