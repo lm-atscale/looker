@@ -162,6 +162,12 @@ view: Date_Looker_Test {
     }
 
 
+    measure: m_customerkey_distinct {
+        label: "Customer Key - DC"
+        type: count_distinct
+        sql: ${TABLE}."m_customerkey_distinct";;
+    }
+
     measure: m_orderquantity_sum {
         label: "Order Quantity SUM"
         type: sum
