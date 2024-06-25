@@ -125,7 +125,7 @@ view: Date_Looker_Test {
     dimension: Date_Value_Year_Week_Hierarchy_Week_Date {
         label: "  Week Date"
         group_label: "Date Value Year Week Hierarchy"
-        type: date_week
+        type: number
         sql: ${TABLE}."Week Date";;
         drill_fields: [Date_Value_Year_Week_Hierarchy_Date_Day]
     }
